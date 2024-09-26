@@ -14,8 +14,8 @@ Sigue estos pasos para configurar y ejecutar el proyecto localmente.
 
 1. **Clona el repositorio:**
    ```bash
-   git clone REPOSITORY
-   cd REPOSITORY
+   git clone [REPOSITORY](https://github.com/melinaacosta/App-Roles.git)
+   cd [REPOSITORY](https://github.com/melinaacosta/App-Roles.git)
    npm install
    npm run start
    ```

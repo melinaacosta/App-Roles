@@ -1,27 +1,41 @@
-# AppRolesLogin
+# 📋 Aplicación Web con Angular + PrimeNG + PrimeFlex
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+Esta es una aplicación web simple construida usando **Angular**, **PrimeNG** y **PrimeFlex**. El proyecto incluye:
 
-## Development server
+- 🛡️ Autenticación avanzada.
+- 🧑‍💻 Control de acceso basado en roles (Roles de Usuario y Administrador).
+- 📝 Interacción dinámica con una API externa para crear, editar y visualizar posts.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Comenzando
 
-## Code scaffolding
+Sigue estos pasos para configurar y ejecutar el proyecto localmente.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 🛠️ Instalación
 
-## Build
+1. **Clona el repositorio:**
+   ```bash
+   git clone REPOSITORY
+   cd REPOSITORY
+   npm install
+   npm run start
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Node version:**
+❯ node -v
+v16.20.2
 
-## Running unit tests
+🔑 Autenticación y Roles
+La aplicación implementa un sistema de autenticación básica con dos roles:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+🧑‍💼 Admin: Puede ver, crear y editar posts. Para iniciar sesion como admin: USUARIO: admin CONTRASEÑA: admin123
+👤 User: Solo puede visualizar posts. Para iniciar sesion como usuario: USUARIO: user CONTRASEÑA: user123
 
-## Running end-to-end tests
+🔒 Protección de Rutas
+Las rutas están protegidas mediante guards basados en roles, asegurando que solo los usuarios autorizados puedan acceder a partes específicas de la aplicación.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+🛠️ Tecnologías Utilizadas
+Angular: Framework frontend
+PrimeNG: Librería de componentes UI
+PrimeFlex: Utilidades para diseño responsivo
+RxJS: Librería de programación reactiva
+TypeScript: JavaScript tipado

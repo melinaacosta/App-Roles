@@ -28,6 +28,7 @@ v16.20.2
 La aplicación implementa un sistema de autenticación básica con dos roles:
 
 🧑‍💼 Admin: Puede ver, crear y editar posts. Para iniciar sesion como admin: USUARIO: admin CONTRASEÑA: admin123
+
 👤 User: Solo puede visualizar posts. Para iniciar sesion como usuario: USUARIO: user CONTRASEÑA: user123
 
 🔒 Protección de Rutas

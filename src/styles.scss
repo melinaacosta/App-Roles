@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+$pastel-header: #ffb6c1;
+$pastel-footer: #ff69b4;
+$error-color: #f0a299;
+$highlight-color: #e23838d9;
+$accept-color: #383ce2d9;
+
+.p-dialog {
+  border-radius: 12px;
+  width: 400px;
+}
+
+.p-dialog-header {
+  font-weight: bold;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.p-dialog .p-dialog-content {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.p-dialog-footer {
+  display: flex;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.p-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.p-error {
+  margin-top: 6px;
+  color: $error-color;
+  font-size: 0.7em;
+}
+
+.p-button {
+  margin-right: 0.5rem;
+  background-color: $accept-color;
+  border: none;
+  color: #fff;
+}
+
+.p-button-secondary {
+  background-color: $highlight-color;
+}

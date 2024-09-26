@@ -1,0 +1,87 @@
+<div class="dashboard">
+  <div class="menu">
+    <h2>Hola {{role}} !</h2>
+    <button
+    (click)="logout()"
+    pButton
+    label="Logout"
+    class="p-button-danger"
+  ></button>
+  </div>
+
+  <div class="cards-container">
+    <div *ngFor="let post of posts" class="p-card">
+      <div class="p-card-header">{{ post.title }}</div>
+      <div class="p-card-body">{{ post.body }}</div>
+      <div class="p-card-footer">
+        <button
+          *ngIf="canEdit()"
+          pButton
+          icon="pi pi-pencil"
+          (click)="showEditDialog(post)"
+        ></button>
+        <button
+          *ngIf="canEdit()"
+          pButton
+          icon="pi pi-plus"
+          (click)="showCreateDialog()"
+        ></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-dialog
+  [(visible)]="displayDialog"
+  [modal]="true"
+  [closable]="false"
+  [header]="isEdit ? 'Editar Post' : 'Crear Post'"
+>
+  <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <div class="p-field">
+      <label for="title">Título</label>
+      <input id="title" pInputText formControlName="title" />
+      <div
+        *ngIf="
+          postForm.controls['title'].invalid &&
+          postForm.controls['title'].touched
+        "
+      >
+        <small class="p-error">El título es obligatorio.</small>
+      </div>
+    </div>
+
+    <div class="p-field">
+      <label for="body">Contenido</label>
+      <textarea
+        id="body"
+        rows="5"
+        pInputTextarea
+        formControlName="body"
+      ></textarea>
+      <div
+        *ngIf="
+          postForm.controls['body'].invalid && postForm.controls['body'].touched
+        "
+      >
+        <small class="p-error">El contenido es obligatorio.</small>
+      </div>
+    </div>
+
+    <div class="p-dialog-footer">
+      <button
+        pButton
+        type="submit"
+        label="{{ isEdit ? 'Guardar' : 'Crear' }}"
+        [disabled]="postForm.invalid"
+      ></button>
+      <button
+        pButton
+        type="button"
+        label="Cancelar"
+        class="p-button-secondary"
+        (click)="hideDialog()"
+      ></button>
+    </div>
+  </form>
+</p-dialog>
